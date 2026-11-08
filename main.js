@@ -36,7 +36,7 @@ announcement.addEventListener('click', (e) => {
 let playButton = document.getElementById("play");
 
 async function playAudio(id) {
-    const response = await fetch(`/audios/${encodeURIComponent(id)}.ogg`);
+    const response = await fetch(`./audios/${encodeURIComponent(id)}.ogg`);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch audio: ${id}`);
@@ -113,7 +113,7 @@ async function generateAnnouncementAudio() {
     // Fetch and decode all audio files
     for (const id of ids) {
         const response = await fetch(
-            `/audios/${encodeURIComponent(id).replaceAll("-", "_")}.ogg`
+            `./audios/${encodeURIComponent(id).replaceAll("-", "_")}.ogg`
         );
 
         if (!response.ok) {
