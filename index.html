@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Metro Lisboa - Gerador de anúncios</title>
+    <meta name="description"
+        content="Pequena ferramenta para recriar os anúncios do Metro de Lisboa, conforme se quiser!">
+
+    <meta name="author" content="Movies22">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Metro Lisboa - Gerador de anúncios">
+    <meta property="og:description"
+        content="Pequena ferramenta para recriar os anúncios do Metro de Lisboa, conforme se quiser!">
+    <meta property="og:locale" content="pt_PT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Metro Lisboa - Gerador de anúncios">
+    <meta name="twitter:description"
+        content="Pequena ferramenta para recriar os anúncios do Metro de Lisboa, conforme se quiser!">
+
+    <meta name="theme-color" content="#a81111">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" href="/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Metro Lisboa - Gerador de anúncios</h1>
+        <div class="main">
+            <label>Aviso sonoro?</label><input id="chime" type="checkbox"></input>
+            <br>
+            <br>
+            <label>Anúncio:</label>
+            <div id="announcement">
+            </div>
+            <div id="template">
+                <span data-id="next-station">Próxima estação</span>
+                <span data-id="station-selector"><select>
+                    <option value="">(Escolher estação)</option>
+                    <option value="aeroporto">Aeroporto</option>
+                    <option value="alameda">Alameda</option>
+                    <option value="alfornelos">Alfornelos</option>
+                    <option value="alto-dos-moinhos">Alto dos Moinhos</option>
+                    <option value="amadora-este">Amadora Este</option>
+                    <option value="anjos">Anjos</option>
+                    <option value="areeiro">Areeiro</option>
+                    <option value="arroios">Arroios</option>
+                    <option value="avenida">Avenida</option>
+                    <option value="baixa-chiado">Baixa-Chiado</option>
+                    <option value="cais-do-sodre">Cais do Sodré</option>
+                    <option value="campo-grande">Campo Grande</option>
+                    <option value="campo-pequeno">Campo Pequeno</option>
+                    <option value="cidade-universitaria">Cidade Universitária</option>
+                    <option value="colegio-militar-luz">Colégio Militar/Luz</option>
+                    <option value="jardim-zoologico">Jardim Zoológico</option>
+                    <option value="laranjeiras">Laranjeiras</option>
+                    <option value="marques-pombal">Marquês de Pombal</option>
+                    <option value="martim-moniz">Martim Moniz</option>
+                    <option value="moscavide">Moscavide</option>
+                    <option value="odivelas">Odivelas</option>
+                    <option value="olaias">Olaias</option>
+                    <option value="olivais">Olivais</option>
+                    <option value="oriente">Oriente</option>
+                    <option value="parque">Parque</option>
+                    <option value="picoas">Picoas</option>
+                    <option value="rato">Rato</option>
+                    <option value="reboleira">Reboleira</option>
+                    <option value="restauradores">Restauradores</option>
+                    <option value="saldanha">Saldanha</option>
+                    <option value="santa-apolonia">Santa Apolónia</option>
+                    <option value="sao-sebastiao">São Sebastião</option>
+                    <option value="telheiras">Telheiras</option>
+                    <option value="terreiro-do-paco">Terreiro do Paço</option>
+                </select></span>
+                <span data-id="change-for">Há correspondência</span>
+                <span data-id="station-selector"><select>
+                    <option value="">(Correspondência)</option>
+                    <option value="linha-yellow">com a linha amarela</option>
+                    <option value="linha-azul">com a linha azul</option>
+                    <option value="linha-verde">com a linha verde</option>
+                    <option value="linha-vermelha">com a linha vermelha</option>
+                    <option value="split">=====</option>
+                    <option value="boat">com o transporte fluvial</option>
+                    <option value="bus">com o terminal rodoviário</option>
+                    <option value="all-trains">com os comboios suburb. e de LC</option>
+                    <option value="suburban-trains">com o comboio suburbano</option>
+                </select></span>
+                <span data-id="e">e</span>
+                <span data-id="terminus-short">Estação terminal</span>
+                <span data-id="terminus-long">Estação terminal. Pede-se o favor de sairem do comboio</span>
+                <span data-id="train-goes-to">Este comboio destina-se a</span>
+                <span data-id="mind-the-gap">Atenção ao intervalo entre o cais e o comboio</span>
+                <span data-id="forcethedoors">Por favor não forcem as portas.</span>
+                <span data-id="naoparaemarroios">Este comboio não para em Arroios.</span>
+        </div>
+        <div class="buttons">
+            <button id="play">Play</button>
+            <button id="download">Descarregar</button>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
